@@ -1,15 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
-  <title>A JavaScript project</title>
-  <link rel="stylesheet" href="../src/style/style.scss">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="../src/style/style.scss">
+
+  <title>Quiz-app - JavaScript project</title>
 </head>
 
 <body>
-  <h1>A JavaScript project</h1>
-  <div id="app"></div>
+
+  <header>
+    <h1>Quiz Application</h1>
+  </header>
+
+  <main>
+    <form class="game-board">
+
+      <div class="game-board__question">
+        <h2>Dlaczego papież nie może zjeść kremówki?</h2>
+      </div>
+
+      <div class="game-board__answers-table">
+
+        <label for="answer1">
+          <div class="game-board__answer">
+            <input type="radio" name="answer" id="answer1">
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+          </div>
+        </label>
+
+        <label for="answer2">
+          <div class="game-board__answer">
+            <input type="radio" name="answer" id="answer2">
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+          </div>
+        </label>
+
+        <label for="answer3">
+          <div class="game-board__answer">
+            <input type="radio" name="answer" id="answer3">
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+            Jakaś tam odpowiedź
+          </div>
+        </label>
+
+        <label for="answer4">
+          <div class="game-board__answer">
+            <input type="radio" name="answer" id="answer4">
+            Jakaś tam odpowiedź
+          </div>
+        </label>
+
+      </div>
+
+      <button class="submit">Zatwierdź</button>
+
+    </form>
+  </main>
+
   <script src="../src/main.js"></script>
 </body>
 
