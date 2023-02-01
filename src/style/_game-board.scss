@@ -3,7 +3,7 @@
     max-width: 1024px;
     min-height: 95%;
     max-height: 768px;
-    padding: 10px;
+    padding: 1.5rem 0.5rem;
     margin: 10px;
     background-color: $grey-3;
     border-radius: 15px;
@@ -14,9 +14,14 @@
     align-items: center;
     justify-content: space-around;
 
+    @media (max-width: 768px) {
+        max-height: none;
+    }
+
     &__question {
         width: 100%;
         text-align: center;
+        padding: 1rem 0;
     }
 
     &__answers-table {
@@ -30,11 +35,12 @@
 
     &__answer {
         width: 100%;
-        min-height: 75px;
+        min-height: 5rem;
         border-radius: 25px;
         background-color: $violet-1;
         border: 2px solid $violet-2;
         box-shadow: 0 0 5px $violet-3;
+        padding: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -58,9 +64,10 @@
 
     button {
         width: 50%;
-        min-height: 75px;
+        height: clamp(4rem, 4rem, 75px);
         border-radius: 50px;
         background-color: $white-2;
+        margin: 2rem 0 0 0;
         font-size: 1.5rem;
         color: $grey-3;
         box-shadow: 0 0 2px $white-1;
@@ -71,6 +78,10 @@
 
         &:hover {
             transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            font-size: 1.2rem;
         }
     }
 }
