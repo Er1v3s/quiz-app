@@ -8,7 +8,7 @@ const questions = [
       2: "Rozszerzenie pliku konfiguracyjnego bazdy danych",
       3: "Strukturalny język zapytań kierowanych do bazy danych",
     },
-    correct_answer: 2,
+    correct_answer: 1,
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const questions = [
       2: "Wyliczeniowego",
       3: "Liczbowego",
     },
-    correct_answer: 2,
+    correct_answer: 1,
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const questions = [
       2: "#00FFFF",
       3: "#F0F0F0",
     },
-    correct_answer: 1,
+    correct_answer: 0,
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const questions = [
       2: "Joomla!",
       3: "Figma",
     },
-    correct_answer: 4,
+    correct_answer: 3,
   },
   {
     id: 5,
@@ -54,7 +54,7 @@ const questions = [
       2: "FTP",
       3: "AJAX",
     },
-    correct_answer: 3,
+    correct_answer: 2,
   },
 ];
 
