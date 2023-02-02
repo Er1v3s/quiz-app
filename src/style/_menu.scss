@@ -1,0 +1,7 @@
+.menu {
+    @extend .game-board;
+
+    .quiz_category {
+        @extend .game-board__answer;
+    }
+}
