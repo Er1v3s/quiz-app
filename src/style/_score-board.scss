@@ -12,6 +12,10 @@
         padding: 2rem 0;
         animation: shakeTrophy 0.8s linear infinite;
     }
+
+    button.playagain-button {
+        @extend .submit-button;
+    }
 }
 
 @keyframes shakeTrophy {

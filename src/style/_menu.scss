@@ -1,7 +1,14 @@
 .menu {
     @extend .game-board;
 
-    .quiz_category {
+    &__quiz_category {
         @extend .game-board__answer;
+        margin-bottom: 10px;
+        margin: 2rem 0;
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        text-align: center;
     }
 }

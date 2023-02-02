@@ -16,6 +16,11 @@
 
     @media (max-width: 768px) {
         max-height: none;
+        padding: 1rem 0.5rem;
+    }
+
+    h2 {
+        font-size: clamp(1.2rem, 3vw, 2rem);
     }
 
     &__question {
@@ -46,42 +51,40 @@
         align-items: center;
         color: $white-1;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 3vw, 1.5rem);
         cursor: pointer;
+        transition: 0.3s;
 
         input[type="radio"] {
             appearance: none;
         }
 
         &:hover {
-            background-color: $violet-3;
+            transform: scale(1.02);
         }
 
         &--active {
-            background-color: $violet-3;
+            background-color: darken($violet-3, 2%);
+            transform: scale(1.02);
         }
     }
 
-    button {
+    button.submit-button {
         width: 50%;
-        height: clamp(4rem, 4rem, 75px);
+        height: 4rem;
         border-radius: 50px;
         background-color: $white-2;
-        margin: 2rem 0 0 0;
-        font-size: 1.5rem;
+        margin-top: clamp(0.5rem, 2vw, 2rem);
+        font-size: clamp(1.2rem, 3vw, 2rem);
         color: $grey-3;
         box-shadow: 0 0 2px $white-1;
         font-weight: bold;
-        cursor: pointer;
         border: none;
+        cursor: pointer;
         transition: 0.2s;
 
         &:hover {
             transform: scale(1.05);
-        }
-
-        @media (max-width: 768px) {
-            font-size: 1.2rem;
         }
     }
 }
