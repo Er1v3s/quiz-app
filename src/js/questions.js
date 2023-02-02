@@ -1,6 +1,7 @@
 const questions = [
   {
     id: 1,
+    category: "programming",
     question: "Co to jest DBMS?",
     answer: {
       0: "Obiektowy język programowania do generowania baz danych",
@@ -12,6 +13,7 @@ const questions = [
   },
   {
     id: 2,
+    category: "programming",
     question:
       "Deklaracja w języku JavaScript: let x = 'true'; powoduje, że zmienna x jest typu",
     answer: {
@@ -24,6 +26,7 @@ const questions = [
   },
   {
     id: 3,
+    category: "programming",
     question: "Który z kodów szesnastkowych oznacza kolor żółty?",
     answer: {
       0: "#FFFF00",
@@ -35,6 +38,7 @@ const questions = [
   },
   {
     id: 4,
+    category: "programming",
     question: "Który z wymienionych systemów nie jest systemem CMS?",
     answer: {
       0: "Drupal",
@@ -46,6 +50,7 @@ const questions = [
   },
   {
     id: 5,
+    category: "programming",
     question:
       "Aby zamieścić aplikację webową w internecie, należy jej pliki źródłowe skopiować na serwer za pomocą protokołu",
     answer: {
