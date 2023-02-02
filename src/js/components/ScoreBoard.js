@@ -10,7 +10,7 @@ const ScoreBoard = (score) => {
     (scoreBoard.innerHTML = `
     <h2>Congratulations!</h2>
     <img src="${trophy}" alt="trophy emoji"/>
-    <h3>Your Score is <span class="score-board__score">${score}</span></h2>
+    <h3>Twój wynik: <span class="score-board__score">${score}</span></h2>
     <button class="playagain-button">Play again</button>`)
   );
 };

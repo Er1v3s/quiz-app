@@ -12,7 +12,7 @@ const Menu = () => {
   score_board.classList.add("hide");
   menu.classList.remove("hide");
 
-  const categoryBtn = document.querySelectorAll(".quiz_category");
+  const categoryBtn = document.querySelectorAll(".menu__quiz_category");
   categoryBtn.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       game_board.classList.remove("hide");
