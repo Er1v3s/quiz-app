@@ -1,0 +1,25 @@
+.score-board {
+    @extend .game-board;
+    font-size: clamp(1rem, 4vw, 2rem);
+
+    &__score {
+        color: $violet-2;
+    }
+
+    img {
+        width: clamp(250px, 40vw, 40%);
+        object-fit: cover;
+        padding: 2rem 0;
+        animation: shakeTrophy 0.8s linear infinite;
+    }
+}
+
+@keyframes shakeTrophy {
+    0%,
+    100% {
+        transform: rotate(3deg);
+    }
+    50% {
+        transform: rotate(-3deg);
+    }
+}

@@ -1,3 +1,4 @@
+import trophy from "../public/assets/trophy.svg";
 import questions from "./js/questions.js";
 class Quiz {
   constructor() {
@@ -9,10 +10,20 @@ class Quiz {
     this.question = document.querySelector(".game-board__question-content");
     this.answer = [...document.querySelectorAll(".game-board__answer")];
 
-    this.renderQuestion();
+    this.quizStart();
+
     this.submit_button.addEventListener("click", (e) => {
       e.preventDefault();
-      this.nextQuestion();
+      this.checkAnswer();
+      this.question_counter >= questions.length - 1
+        ? this.quizEnd(this.score)
+        : this.nextQuestion();
+    });
+  }
+
+  removeClassName() {
+    this.answer.forEach((answer) => {
+      answer.classList.remove("game-board__answer--active");
     });
   }
 
@@ -23,9 +34,28 @@ class Quiz {
   }
 
   nextQuestion() {
-    this.checkAnswer();
     this.question_counter++;
+    this.removeClassName();
     this.renderQuestion();
+  }
+
+  quizStart() {
+    this.question_counter = 0;
+    this.score = 0;
+    this.value = null;
+    this.renderQuestion();
+  }
+
+  quizEnd(score) {
+    const gameBoard = document.querySelector(".game-board");
+    const scoreBoard = document.querySelector(".score-board");
+    scoreBoard.classList.remove("hide");
+    gameBoard.classList.add("hide");
+    scoreBoard.innerHTML = `
+    <h2>Congratulations!</h2>
+    <img src="${trophy}" alt="trophy emoji"/>
+    <h3>Your Score is <span class="score-board__score">${score}</span></h2>
+    <button class="submit-button">Play again</button>`;
   }
 
   renderQuestion() {
@@ -45,6 +75,11 @@ class Quiz {
 
     this.input.forEach((input) => {
       input.addEventListener("click", (e) => {
+        console.log(e.target.value);
+        this.removeClassName();
+        this.answer[e.target.value].classList.toggle(
+          "game-board__answer--active"
+        );
         this.value = e.target.value;
         this.value = parseInt(this.value);
       });
