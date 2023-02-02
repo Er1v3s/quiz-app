@@ -19,36 +19,7 @@ class Quiz {
     this.submit_button.addEventListener("click", (e) => {
       e.preventDefault();
       this.checkAnswer();
-      this.question_counter >= this.questionsCopy.length - 1
-        ? this.quizEnd(this.score)
-        : this.nextQuestion();
     });
-  }
-
-  removeClassName() {
-    this.answer.forEach((answer) => {
-      answer.classList.remove("game-board__answer--active");
-    });
-  }
-
-  checkAnswer() {
-    if (
-      this.value === this.questionsCopy[this.question_counter].correct_answer
-    ) {
-      this.score++;
-    }
-  }
-
-  findCategory(category) {
-    this.questionsCopy = questions.filter(
-      (element) => element.category === category
-    );
-  }
-
-  nextQuestion() {
-    this.question_counter++;
-    this.removeClassName();
-    this.renderQuestion();
   }
 
   quizStart(category) {
@@ -100,6 +71,41 @@ class Quiz {
         this.value = e.target.value;
         this.value = parseInt(this.value);
       });
+    });
+  }
+
+  checkAnswer() {
+    if (this.value === undefined || this.value === null) {
+      alert("Nie podano żadnej odpowiedzi! Jak nie wiesz to strzelaj ;)");
+    } else {
+      if (
+        this.value === this.questionsCopy[this.question_counter].correct_answer
+      ) {
+        this.score++;
+      }
+
+      this.question_counter >= this.questionsCopy.length - 1
+        ? this.quizEnd(this.score)
+        : this.nextQuestion();
+    }
+  }
+
+  nextQuestion() {
+    this.question_counter++;
+    this.value = null;
+    this.removeClassName();
+    this.renderQuestion();
+  }
+
+  findCategory(category) {
+    this.questionsCopy = questions.filter(
+      (element) => element.category === category
+    );
+  }
+
+  removeClassName() {
+    this.answer.forEach((answer) => {
+      answer.classList.remove("game-board__answer--active");
     });
   }
 }
