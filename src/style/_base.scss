@@ -31,17 +31,12 @@ main {
 }
 
 header {
-    height: 15vh;
+    height: 10vh;
     padding: 0 1rem 0 1rem;
     text-align: center;
-
-    @media (max-width: 768px) {
-        height: 10vh;
-        margin: 5vh;
-    }
+    margin: 2vh 0;
 
     h1 {
-        font-size: clamp(2rem, 5vw, 48px);
         background: linear-gradient(
             90deg,
             rgba(233, 235, 240, 1) 0%,
@@ -55,6 +50,14 @@ header {
         -webkit-background-clip: text;
         color: transparent;
         animation: textclip 3s linear infinite;
+
+        @media (orientation: landscape) {
+            font-size: clamp(1.5rem, 5vw, 48px);
+        }
+
+        @media (orientation: portrait) {
+            font-size: clamp(1.5rem, 5vh, 48px);
+        }
     }
 }
 

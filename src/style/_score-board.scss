@@ -1,6 +1,14 @@
 .score-board {
     @extend .game-board;
-    font-size: clamp(1rem, 4vw, 2rem);
+    // font-size: clamp(1rem, 4vw, 2rem);
+
+    &__title {
+        font-size: clamp(1.5rem, 5vw, 3rem) !important;
+    }
+
+    &__score-message {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+    }
 
     &__score {
         color: $violet-2;
@@ -15,6 +23,7 @@
 
     button.playagain-button {
         @extend .submit-button;
+        margin-top: 2rem;
     }
 }
 
