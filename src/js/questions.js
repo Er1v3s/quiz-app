@@ -72,7 +72,7 @@ const questions = [
     category: "database",
     question: "Co to jest baza danych?",
     answer: {
-      0: "Baza danych to uporządkowany zbiór danych z pewnej dziedziny tematycznej, zorganizowany w sposób umożliwiający ich wyszukiwanie według zadanych kryteriów",
+      0: "Baza danych to uporządkowany zbiór danych z pewnej dziedziny tematycznej",
       1: "Baza danych to zbiór informacji z pewnej dziedziny",
       2: "Baza danych to zbiór danych z pewnej dziedziny",
       3: "Baza danych to uporządkowany zbiór danych obejmujący całą wiedzę",
